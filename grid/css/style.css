@@ -1,0 +1,254 @@
+@font-face {
+    font-family: "Jost";
+    src: url("../fonts/Jost-Regular.ttf");
+}
+* {
+    font-family: "Jost";
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.full-view {
+    height: 100vh;
+    position: relative;
+}
+
+.background-red {
+    background: #9A1212;
+}
+
+.absolute1, .absolute2 {position: absolute; bottom: 0; right: 0; height: 100vh;}
+.absolute1 {right: 150px;}
+
+.kepchup {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 60px 55px 1fr 55px;
+    box-sizing: border-box;
+    padding-right: 60px;
+    justify-content: end;
+    background: url('../img/background.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 40px 40px;
+}
+
+.button {
+    background: white;
+    height: 60px;
+    width: 190px;
+    border-radius: 50px;
+    z-index: 10;
+}
+.button a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    color: black;
+    text-decoration: none;
+    font-size: 23px;
+    margin: 0 10px;
+}
+
+.menu img {height: 35px; margin-left: 10px;}
+
+header {
+    grid-row: 2/3;
+    display: grid;
+    grid-template-columns: 1fr 1fr 190px 190px 190px;
+    justify-content: end;
+    column-gap: 30px;
+}
+
+header .button:nth-child(1) {
+    grid-column: 3/4;
+}
+
+.kepchup main {
+    grid-row: 3/4;
+    display: grid;
+    justify-content: end;
+    text-align: right;
+    color: #fff;
+    margin: 30px;
+    z-index: 10;
+}
+.kepchup main p:first-child {
+    font-size: 90px;
+    margin-bottom: 40px;
+}
+.kepchup main p:nth-child(2) {
+    font-size: 30px;
+    width: 750px;
+    align-self: end;
+}
+.kepchup > .button {
+    grid-row: 4/5;
+    justify-self: end;
+}
+.kepchup2 {
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 50px 1fr 130px;
+}
+.dkp {
+    background: #F3F3F3;
+    height: 50px;
+    font-size: 33px;
+    font-weight: bold;
+    color: white;
+}
+.dkp p {
+    position: absolute;
+    white-space: nowrap;
+    left: 0;
+}
+
+footer {
+    height: 130px;
+    background: #F3F3F3;
+    font-size: 23px;
+    box-sizing: border-box;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+}
+
+footer p {
+    z-index: 10;
+}
+
+.kepchup2 main {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    align-items: center;
+}
+
+.kepchup2 main {
+    z-index: 10;
+}
+
+.kepchup2 main > img {
+    height: 60px;
+}
+
+.kepchup2 main > img:first-child {
+    justify-self: center;
+}
+
+.kepchup2 main a{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    height: 450px;
+    width: 250px;
+    color: #9A1212;
+    text-decoration: none;
+    font-size: 30px;
+    text-align: center;
+}
+.kepchup2 main a img {
+    position: relative;
+    width: 100%;
+}
+
+@media screen and (max-height: 870px){
+    .kepchup main p:first-child {
+        font-size: 75px;
+    }
+    .kepchup main p:nth-child(2) {
+        font-size: 25px;
+        width: 600px;
+    }
+}
+
+@media screen and (max-width: 1350px) {
+    .absolute1, .absolute2 {
+        filter: blur(5px);
+        opacity: .5;
+    }
+    .kepchup {
+        background: none;
+        align-items: center;
+    }
+
+    .kepchup main {
+        text-align: center;
+    }
+
+    .kepchup main p:nth-child(2) {
+        font-size: 25px;
+        width: 600px;
+    }
+
+    .button {
+        height: 45px;
+        width: 130px;
+        margin: 0;
+    }
+    .button:nth-child(2) {
+        margin: 0 30px;
+    }
+    .button a {
+        font-size: 20px;
+    }
+
+    .button a img {height: 25px;}
+
+    .kepchup2 main {
+        width: 90%;
+        margin-right: 60px;
+    }
+}
+
+@media screen and (max-width: 1050px) {
+    .kepchup2 main a:nth-child(4) {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .absolute1 { right: 120px;}
+    .absolute2 { right: 0;}
+    .kepchup2 main {
+        margin: 0 10px;
+    }
+    .kepchup2 main a:nth-child(3) {
+        display: none;
+    }
+    .kepchup main { width: 100%;}
+    .kepchup main p:nth-child(2) {
+        font-size: 22px;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .kepchup main p:first-child {
+        font-size: 50px;
+    }
+    .button {
+        height: 40px;
+        width: 115px;
+        margin: 0;
+    }
+    .button:nth-child(2) {
+        margin: 0 5px;
+    }
+    .button a {
+        font-size: 17px;
+    }
+
+    .button a img {height: 20px;}
+    .kepchup2 main a img {
+        position: relative;
+        width: 95%;
+    }
+}
